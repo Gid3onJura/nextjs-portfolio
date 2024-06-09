@@ -10,15 +10,15 @@ const Homepage = () => {
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
-          <div className="text-center xl:text-left mt-5 xl:mt-0">
+          <div className="order-2 xl:order-none text-center xl:text-left">
             <span className="text-xl">Web-Entwickler</span>
             <h1 className="h1 mb-6">
-              Hi, I'm Gideon <br />
+              Hi, I'm <br />
               <span>Gideon Jura</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
               Veniam tempor enim eu eu nisi eu dolor sint pariatur. Ex ullamco non adipisicing amet nisi reprehenderit
-              consectetur irure non magna. Duis pariatur incididunt commodo ullamco mollit Lorem exercitation eu.
+              consectetur irure non magna.
             </p>
 
             {/* socials */}
@@ -39,7 +39,7 @@ const Homepage = () => {
           </div>
 
           {/* photo */}
-          <div>
+          <div className="order-1 xl:order-none mb-3 xl:mb-0">
             <Photo />
           </div>
         </div>
