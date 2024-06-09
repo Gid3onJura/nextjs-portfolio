@@ -1,24 +1,34 @@
+"use client"
+
 import Photo from "@/components/Photo"
 import Socials from "@/components/Socials"
+import Stats from "@/components/Stats"
 import { Button } from "@/components/ui/button"
-import React from "react"
 import { FiDownload } from "react-icons/fi"
+import React, { useState, useEffect } from "react"
 
 const Homepage = () => {
+  const [pastYears, setPastYears] = useState(0)
+  useEffect(() => {
+    const year = new Date("2020-08-01").getFullYear()
+    const currentYear = new Date().getFullYear()
+    setPastYears(currentYear - year)
+  }, [])
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="order-2 xl:order-none text-center xl:text-left">
-            <span className="text-xl">Web-Entwickler</span>
+            <span className="text-xl">Full-Stack-Entwickler</span>
             <h1 className="h1 mb-6">
               Hi, I'm <br />
               <span>Gideon Jura</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Veniam tempor enim eu eu nisi eu dolor sint pariatur. Ex ullamco non adipisicing amet nisi reprehenderit
-              consectetur irure non magna.
+              Ich bin ein <span className="font-bold">Full-Stack Entwickler</span> mit{" "}
+              <span className="font-bold">{pastYears > 8 ? "mehr als 8" : pastYears} Jahren</span> Berufserfahrung. Ich
+              liebe es <span className="italic">Web-Seiten & Apps</span> zu bauen.
             </p>
 
             {/* socials */}
@@ -44,6 +54,7 @@ const Homepage = () => {
           </div>
         </div>
       </div>
+      {/* <Stats /> */}
     </section>
   )
 }
