@@ -9,12 +9,12 @@ const Photo = () => {
     <div className="h-full w-full relative">
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { delay: 2, duration: 0.4, ease: "easeIn" } }}
+        animate={{ opacity: 1, transition: { delay: 0, duration: 0.4, ease: "easeIn" } }}
       >
         {/* image */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" } }}
+          animate={{ opacity: 1, transition: { delay: 0.4, duration: 0.4, ease: "easeInOut" } }}
           className="w-[268px] h-[268px] xl:w-[498px] xl:h-[498px] mix-blend-soft-light absolute"
         >
           <Image src="/assets/think.png" priority quality={100} fill alt="" className="object-contain" />
