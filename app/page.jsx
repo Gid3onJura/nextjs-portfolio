@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button"
 import { FiDownload } from "react-icons/fi"
 import React, { useState, useEffect } from "react"
 
+import { motion } from "framer-motion"
+
 const Homepage = () => {
   const [pastYears, setPastYears] = useState(0)
   useEffect(() => {
@@ -15,7 +17,14 @@ const Homepage = () => {
     setPastYears(currentYear - year)
   }, [])
   return (
-    <section className="h-full">
+    <motion.section
+      // initial={{ opacity: 0 }}
+      // animate={{
+      //   opacity: 1,
+      //   transition: { delay: 0.4, duration: 0.5, ease: "easeIn" },
+      // }}
+      className="h-full"
+    >
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
@@ -55,7 +64,7 @@ const Homepage = () => {
         </div>
       </div>
       {/* <Stats /> */}
-    </section>
+    </motion.section>
   )
 }
 

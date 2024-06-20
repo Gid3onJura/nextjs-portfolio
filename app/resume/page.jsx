@@ -27,7 +27,7 @@ const about = {
     },
     {
       fieldName: "E-Mail",
-      fieldValue: "hbkdes@googlemail.com",
+      fieldValue: "mail@googlemail.com",
     },
     {
       fieldName: "Sprachen",

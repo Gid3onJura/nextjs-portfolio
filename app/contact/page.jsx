@@ -18,12 +18,12 @@ const info = [
   {
     icon: <FaEnvelope />,
     title: "E-Mail",
-    description: "hbkdes@googlemail.com",
+    description: "mail@googlemail.com",
   },
   {
     icon: <FaMapMarkedAlt />,
     title: "Zur Zeit in",
-    description: "Halle",
+    description: "Leipzig",
   },
 ]
 
